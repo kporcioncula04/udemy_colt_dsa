@@ -16,6 +16,5 @@ function findLongestSubstring(str){
       sliced = str[i]
     }
   }
-  ``
   return max
 }
