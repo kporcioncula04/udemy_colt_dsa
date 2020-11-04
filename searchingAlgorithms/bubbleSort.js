@@ -41,3 +41,5 @@ function bubbleSort(arr){
   return arr
 }
 console.log(bubbleSort([5,3,4,1,2]))
+
+//nearly sorted data
