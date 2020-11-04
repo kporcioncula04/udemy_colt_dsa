@@ -20,10 +20,6 @@ function maxSubarraySum(arr,n){
 
   return max
 
-
-
-
-
 }
 console.log(maxSubarraySum([1,2,5,2,8,1,5], 2))
 console.log(maxSubarraySum([2,6,9,2,1,8,5,6,3], 3))
