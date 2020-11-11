@@ -61,6 +61,45 @@ class SinglyLinkedList{
     }
     return currNode
   }
+
+  unshift(val){
+    let newNode = new Node(val)
+
+    if(!this.head){
+      this.head = newNode
+      this.tail = this.head
+    } else {
+      newNode.next = this.head
+      this.head = newNode
+    }
+
+    this.length += 1;
+    return this
+  }
+
+  //manually counting
+  get(index){
+    let counter = 0;
+    let currNode = this.head
+    if(index < 0 || index >= this.length) return null
+
+    while(counter !== index){
+      currNode = currNode.next;
+      counter++;
+    }
+    return currNode
+  }
+
+  set(val,index){
+    let node = this.get(index)
+
+    if(node) {
+      node.val = val
+      return true
+    }
+    return false
+
+  }
 }
 
 var list = new SinglyLinkedList()
@@ -73,8 +112,12 @@ list.push('!')
 // console.log(list.head)
 // console.log(list.tail)
 //console.log(list.pop())
-console.log(list.shift())
-console.log(list.shift())
-console.log(list.shift())
-console.log(list.shift())
-console.log(list.push(200))
+// console.log(list.shift())
+// console.log(list.shift())
+// console.log(list.shift())
+// console.log(list.shift())
+// console.log(list.push(200))
+// console.log(list.unshift(10))
+console.log(list.get(0))
+console.log(list.set(2,'!!!'))
+console.log(list)
