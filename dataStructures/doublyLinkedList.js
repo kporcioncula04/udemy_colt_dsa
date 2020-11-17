@@ -160,3 +160,14 @@ console.log(list.insert(1, 'winner'))
 console.log(list.insert(0, 'win'))
 console.log(list.insert(4, 'winz'))
 
+// Big 0
+
+// insertion - 0(1)
+// removal - 0(1)
+// searching - 0(n)
+// access - 0(n)
+
+//Difference between SinglyLinkedList is the additional pointer(previous nodes)
+//Better than SinglyLinkedList for finding nodes and cuts the time in half
+//downside: takes up more memory because of extra pointer
+
