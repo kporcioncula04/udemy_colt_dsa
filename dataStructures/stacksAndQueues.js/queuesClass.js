@@ -49,3 +49,13 @@ queue.enqueue(20)
 queue.dequeue()
 queue.dequeue()
 console.log(queue)
+
+
+//BIG O
+// insertion - 0(1)
+// removal - 0(1)
+// searching - 0(N)
+// access - 0(N)
+
+//queues - FIFO
+//keep track of an order. print queue
