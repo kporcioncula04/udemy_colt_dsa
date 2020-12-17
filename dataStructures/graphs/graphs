@@ -1,0 +1,29 @@
+what is it?
+nodes + connections
+
+where do we use it?
+everywhere!!
+location/mapping
+routing
+social networks
+the internet!
+recommendations - spotify, netflix, fb, ig, amazon
+
+types of graphs
+
+vertex
+edge
+
+directed vs undirected
+weighted vs unweighted
+
+
+adjacency list
+  -less space
+  -fatser iteration
+  -slow lookup
+
+adjacency matrix
+  -takes up more space
+  -slower iteration
+  -faster lookup
