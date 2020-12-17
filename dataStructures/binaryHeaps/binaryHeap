@@ -24,3 +24,9 @@ what is max and min heap?
   17    19   36  7
   / \
 25 100
+
+
+Priority queues
+
+-DS where each elem has a priority
+-higher elems are served before lower elem
