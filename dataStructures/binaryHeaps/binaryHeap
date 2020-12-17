@@ -2,6 +2,8 @@ what is a binary heap?
 where do we use it?
 what is max and min heap?
 
+-ds used for sorting
+-we always fill out the left first
 -binary heap is as compact as possible
 -used to implement priority queues, graph traversal
 -similar binary search tree but
@@ -25,8 +27,13 @@ what is max and min heap?
   / \
 25 100
 
+Big O of Binary Heaps
+
+- insertion, deletion O(log N)
+
 
 Priority queues
 
 -DS where each elem has a priority
 -higher elems are served before lower elem
+
