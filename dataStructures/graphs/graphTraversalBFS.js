@@ -32,29 +32,34 @@ class Graph{
     delete this.adjacenyList[vertex]
   }
 
-  dfsIterative(start){
-    let S = [];
-    let result = [];
-    let visited = {}
-    let currvertex;
-    S.push(start)
-    visited[start] = true
+    //push
+    //shift
+    //fifo
+  bfs(start){
+    let queue = [start]
+    let visitedArr = []
+    let visitedObj = {}
+    let firstVertex;
 
-    while(S.length){
-      console.log('stack',S)
-      console.log('result', result)
-      console.log('visited', visited)
-      currvertex = S.pop()
-      result.push(currvertex)
+    visitedObj[start] = true
 
-      this.adjacenyList[currvertex].forEach(neighbor => {
-        if(!visited[neighbor]){
-          visited[neighbor] = true
-          S.push(neighbor)
+    while(queue.length){
+      console.log('queue', queue)
+      console.log('result', visitedArr)
+      console.log('obj', visitedObj)
+      firstVertex = queue.shift()
+      visitedArr.push(firstVertex)
+
+
+      this.adjacenyList[firstVertex].forEach( neighbor => {
+        if(!visitedObj[neighbor]){
+          visitedObj[neighbor] = true
+          queue.push(neighbor)
         }
       })
     }
-    return result;
+
+    return visitedArr
   }
 
 }
@@ -75,6 +80,6 @@ graph.addEdge('d', 'e')
 graph.addEdge('d', 'f')
 graph.addEdge('e', 'f')
 
-console.log(graph.dfsIterative('a'))
+console.log(graph.bfs('a'))
 
 console.log(graph)
