@@ -50,7 +50,6 @@ class Graph{
       firstVertex = queue.shift()
       visitedArr.push(firstVertex)
 
-
       this.adjacenyList[firstVertex].forEach( neighbor => {
         if(!visitedObj[neighbor]){
           visitedObj[neighbor] = true
@@ -58,10 +57,8 @@ class Graph{
         }
       })
     }
-
     return visitedArr
   }
-
 }
 
 let graph = new Graph()
