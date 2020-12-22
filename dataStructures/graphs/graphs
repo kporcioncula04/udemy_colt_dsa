@@ -27,3 +27,13 @@ adjacency matrix
   -takes up more space
   -slower iteration
   -faster lookup
+
+
+--------
+
+Graph Traversal
+
+-web crawlers
+-finding the 'closest' matches
+-shortest path
+  -gps,solving mazes
