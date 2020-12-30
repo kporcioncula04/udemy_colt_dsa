@@ -1,0 +1,19 @@
+what is DP?
+-approach to solving some problems, helps in performance, break it into smaller pieces
+-coming up to an optimal solution
+
+When to use it?
+What is overlapping subproblems?
+-duplicates
+-broken down into smaller problems that can be used several times
+
+What is optimal substructure?
+-shortest path
+-longest simple path
+-cheap flights to somewhere
+
+Memoization
+-structure to store data in
+
+Tabulation
+-storing the result of a previous result in a 'table'(usually an array)
