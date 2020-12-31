@@ -17,3 +17,6 @@ Memoization
 
 Tabulation
 -storing the result of a previous result in a 'table'(usually an array)
+-iteration
+-improves space complexity
+
