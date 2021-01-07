@@ -56,3 +56,6 @@ console.log(radixSort([123,32,54,4406]))
 //BIG O
 //space - O(n+k)
 //time - O(nk)
+
+//n - length of array
+//k - num of digits

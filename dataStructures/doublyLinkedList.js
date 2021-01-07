@@ -1,22 +1,22 @@
-class Node{
-  constructor(val){
+class Node {
+  constructor(val) {
     this.val = val
     this.next = null
     this.prev = null
   }
 }
 
-class DoublyLinkedList{
-  constructor(){
+class DoublyLinkedList {
+  constructor() {
     this.head = null
     this.tail = null
     this.length = 0
   }
 
-  push(val){
+  push(val) {
     let newNode = new Node(val)
 
-    if(this.head === null) {
+    if (this.head === null) {
       this.head = newNode
       this.tail = newNode
     } else {
@@ -29,14 +29,14 @@ class DoublyLinkedList{
     return this
   }
 
-  pop(){
-    if(!this.head) return undefined
+  pop() {
+    if (!this.head) return undefined
     let currTail = this.tail
 
-    if(this.length === 1) {
+    if (this.length === 1) {
       this.head = null
       this.tail = null
-    } else{
+    } else {
       this.tail = currTail.prev
       this.tail.next = null
       currTail.prev = null
@@ -46,15 +46,15 @@ class DoublyLinkedList{
     return currTail
   }
 
-  shift(){
-    if(this.length === 0) return undefined
+  shift() {
+    if (this.length === 0) return undefined
 
     let oldHead = this.head
 
-    if(this.length === 1) {
+    if (this.length === 1) {
       this.head = null
       this.tail = null
-    } else{
+    } else {
       this.head = oldHead.next
       this.head.prev = null
       oldHead.next = null
@@ -64,12 +64,12 @@ class DoublyLinkedList{
     return oldHead
   }
 
-  unshift(val){
+  unshift(val) {
     let newNode = new Node(val)
-    if(this.length === 0){
-      this.head =  newNode
+    if (this.length === 0) {
+      this.head = newNode
       this.tail = newNode
-    } else{
+    } else {
       this.head.prev = newNode
       newNode.next = this.head
       this.head = newNode
@@ -79,21 +79,21 @@ class DoublyLinkedList{
     return this
   }
 
-  get(index){
-    if(index < 0 || index >= this.length) return null
+  get(index) {
+    if (index < 0 || index >= this.length) return null
 
-    if(index <= this.length/2){
+    if (index <= this.length / 2) {
       let current = this.head
       let count = 0;
-      while(count !== index){
+      while (count !== index) {
         current = current.next
         count++
       }
       return current
-    } else{
+    } else {
       let count = this.length - 1
       let current = this.tail
-      while(count !== index){
+      while (count !== index) {
         current = current.prev
         count--
       }
@@ -101,10 +101,10 @@ class DoublyLinkedList{
     }
   }
 
-  set(index, val){
+  set(index, val) {
     let curr = this.get(index)
 
-    if(curr){
+    if (curr) {
       curr.val = val
       return true
     } else {
@@ -112,14 +112,14 @@ class DoublyLinkedList{
     }
   }
 
-  insert(index,val){
+  insert(index, val) {
     let newNode = new Node(val)
     let beforeNode = this.get(index - 1)
     let afterNode = beforeNode.next
 
-    if(index < 0 || index >= this.length) return false
-    if(index === 0) return this.unshift(val)
-    if(index === this.length) return this.push(val)
+    if (index < 0 || index >= this.length) return false
+    if (index === 0) return this.unshift(val)
+    if (index === this.length) return this.push(val)
 
     //item before it because we are inserting in there
 
@@ -132,10 +132,10 @@ class DoublyLinkedList{
     return true
   }
 
-  remove(index){
-    if(index < 0 || index >= this.length) return undefined
-    if(index === 9) return this.shift()
-    if(index === this.length - 1) return this.pop()
+  remove(index) {
+    if (index < 0 || index >= this.length) return undefined
+    if (index === 9) return this.shift()
+    if (index === this.length - 1) return this.pop()
 
     let itemToBeRemoved = this.get(index)
     itemToBeRemoved.prev.next = itemToBeRemoved.next
@@ -146,7 +146,20 @@ class DoublyLinkedList{
     this.length--;
     return itemToBeRemoved;
   }
+  reverse() {
+    let node = this.head;
+    this.head = this.tail;
+    this.tail = node;
 
+    for (let i = 0; i < this.length; i++) {
+      let prev = node.next;
+      node.next = node.prev;
+      node.prev = prev;
+      node = prev;
+    }
+
+    return this;
+  }
 }
 
 var list = new DoublyLinkedList()
