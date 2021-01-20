@@ -23,3 +23,7 @@ function maxSubarraySum(arr,n){
 }
 console.log(maxSubarraySum([1,2,5,2,8,1,5], 2))
 console.log(maxSubarraySum([2,6,9,2,1,8,5,6,3], 3))
+
+
+
+given an array of integers and a Number, write a function called maxSubarraySum, which finds the maximum sum of a subarray with the length of the number passed to the function.
